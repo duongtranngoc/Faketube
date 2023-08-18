@@ -1,0 +1,10 @@
+build/
+ext/
+classic.json
+classic.jsonp
+modern.json
+modern.jsonp
+*.log
+.vscode/
+.idea/
+.sencha
