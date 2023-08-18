@@ -18,7 +18,7 @@ class ChannelSeeder extends Seeder
     {
         $faker = Faker::create();
 
-        for ($i = 0; $i < 10; $i++) {
+        for ($i = 0; $i < 50; $i++) {
             DB::table('channels')->insert([
                 'ChannelName' => $faker->name,
                 'Description' => $faker->sentence,

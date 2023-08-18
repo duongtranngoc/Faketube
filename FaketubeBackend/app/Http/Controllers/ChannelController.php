@@ -9,7 +9,9 @@ class ChannelController extends Controller
 {
     public function getChannels()
     {
-        $channels = Channel::select('ChannelId', 'ChannelName', 'Description', 'SubscribersCount', 'URL')->get();
+        $channels = Channel::select('ChannelId', 'ChannelName', 'Description', 'SubscribersCount', 'URL')
+            ->latest() // Sắp xếp theo bản ghi mới nhất
+            ->get();
         return response()->json($channels);
     }
 
